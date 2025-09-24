@@ -365,21 +365,27 @@ const App = () => {
                     </button>
 
                     {/* Page numbers */}
-                    {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
-                      const pageNum = Math.max(1, Math.min(currentPage - 2 + i, totalPages - 4 + i));
-                      return pageNum <= totalPages ? (
-                        <button
-                          key={pageNum}
-                          onClick={() => setCurrentPage(pageNum)}
-                          className={`px-3 py-1 border rounded ${currentPage === pageNum
-                            ? 'bg-blue-500 text-white border-blue-500'
-                            : 'border-gray-300 hover:bg-gray-50'
-                            }`}
-                        >
-                          {pageNum}
-                        </button>
-                      ) : null;
-                    })}
+                    {(() => {
+                      const pages = [];
+                      const startPage = Math.max(1, currentPage - 2);
+                      const endPage = Math.min(totalPages, startPage + 4);
+
+                      for (let i = startPage; i <= endPage; i++) {
+                        pages.push(
+                          <button
+                            key={`page-${i}`}
+                            onClick={() => setCurrentPage(i)}
+                            className={`px-3 py-1 border rounded ${currentPage === i
+                              ? 'bg-blue-500 text-white border-blue-500'
+                              : 'border-gray-300 hover:bg-gray-50'
+                              }`}
+                          >
+                            {i}
+                          </button>
+                        );
+                      }
+                      return pages;
+                    })()}
 
                     <button
                       onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
