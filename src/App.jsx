@@ -318,18 +318,6 @@ const App = () => {
                                   if (e.key === 'Escape') cancelEdit();
                                 }}
                               />
-                              <button
-                                onClick={saveEdit}
-                                className="text-green-600 hover:text-green-800"
-                              >
-                                <Save size={14} />
-                              </button>
-                              <button
-                                onClick={cancelEdit}
-                                className="text-red-600 hover:text-red-800"
-                              >
-                                <X size={14} />
-                              </button>
                             </div>
                           ) : (
                             <div className="flex items-center gap-2">
