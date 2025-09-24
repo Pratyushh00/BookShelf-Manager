@@ -1,0 +1,7 @@
+- [x] Project scaffolded with Vite + React template.
+- [ ] Customize the project for BookShelf Manager features.
+- [ ] Install required extensions (none needed for Vite/React).
+- [ ] Compile and run diagnostics.
+- [ ] Create and run tasks if needed.
+- [ ] Launch the project.
+- [ ] Ensure documentation is complete.

@@ -1,0 +1,97 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+
+    body,
+    html,
+    .container {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px;
+    }
+
+    .book-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .book-table th,
+    .book-table td {
+      border: 1px solid #dee2e6;
+      padding: 6px 8px;
+      text-align: left;
+    }
+
+    .book-table th {
+      background: #e9ecef;
+      font-weight: bold;
+    }
+
+    .book-table input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      padding: 2px 4px;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        padding: 4px;
+      }
+
+      .book-table th,
+      .book-table td {
+        padding: 4px 2px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
